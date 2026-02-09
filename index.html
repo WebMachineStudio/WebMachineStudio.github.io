@@ -1,0 +1,710 @@
+<html lang="ru" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Machine Studio - Профессиональная веб-разработка</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #030712;
+            color: #e5e7eb;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(3, 7, 18, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #fff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom toggle switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #3b82f6;
+        }
+
+        .toggle-checkbox:checked+.toggle-label {
+            background-color: #3b82f6;
+        }
+    </style>
+    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-geist">
+        .font-geist {
+            font-family: 'Geist', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-roboto">
+        .font-roboto {
+            font-family: 'Roboto', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-montserrat">
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-poppins">
+        .font-poppins {
+            font-family: 'Poppins', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+    <style id="all-fonts-style-font-playfair">
+        .font-playfair {
+            font-family: 'Playfair Display', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-instrument-serif">
+        .font-instrument-serif {
+            font-family: 'Instrument Serif', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap">
+    <style id="all-fonts-style-font-merriweather">
+        .font-merriweather {
+            font-family: 'Merriweather', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-bricolage">
+        .font-bricolage {
+            font-family: 'Bricolage Grotesque', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-jakarta">
+        .font-jakarta {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-manrope">
+        .font-manrope {
+            font-family: 'Manrope', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-space-grotesk">
+        .font-space-grotesk {
+            font-family: 'Space Grotesk', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-work-sans">
+        .font-work-sans {
+            font-family: 'Work Sans', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap">
+    <style id="all-fonts-style-font-pt-serif">
+        .font-pt-serif {
+            font-family: 'PT Serif', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-geist-mono">
+        .font-geist-mono {
+            font-family: 'Geist Mono', monospace !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap">
+    <style id="all-fonts-style-font-space-mono">
+        .font-space-mono {
+            font-family: 'Space Mono', monospace !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-quicksand">
+        .font-quicksand {
+            font-family: 'Quicksand', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-nunito">
+        .font-nunito {
+            font-family: 'Nunito', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap">
+    <style id="all-fonts-style-font-newsreader">
+        .font-newsreader {
+            font-family: 'Newsreader', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-google-sans-flex">
+        .font-google-sans-flex {
+            font-family: 'Google Sans Flex', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-oswald">
+        .font-oswald {
+            font-family: 'Oswald', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-dm-sans">
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-cormorant" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-cormorant">
+        .font-cormorant {
+            font-family: 'Cormorant Garamond', serif !important;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-blue-500/30 selection:text-blue-200">
+
+    <!-- Background (component) added by Aura -->
+    <div class="aura-background-component fixed top-0 w-full h-screen -z-10" data-alpha-mask="80" style="; mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)">
+        <div class="w-full h-full">
+            <div class="w-full h-full relative">
+                <div class="aura-background-component top-0 w-full absolute h-full">
+                    <div data-us-project="bKN5upvoulAmWvInmHza" class="absolute w-full h-full left-0 top-0"></div>
+                    <script type="text/javascript">
+                        !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-6 h-6 rounded bg-gradient-to-tr to-blue-500 flex items-center justify-center from-white">
+                    <span class="text-black text-xs font-bold">WM</span>
+                </div>
+                <span class="text-sm font-semibold tracking-tight group-hover:opacity-80 transition-opacity text-white">Web Machine Studio</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-sm transition-colors text-stone-400 hover:text-white">Услуги</a>
+                <a href="#portfolio" class="text-sm transition-colors text-stone-400 hover:text-white">Портфолио</a>
+                <a href="#process" class="text-sm transition-colors text-stone-400 hover:text-white">Процесс</a>
+                <a href="#pricing" class="text-sm transition-colors text-stone-400 hover:text-white">Цены</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="text-xs font-medium px-4 py-2 rounded-full transition-colors bg-white text-black hover:bg-stone-200">Связаться</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="md:pt-48 md:pb-32 overflow-hidden pt-32 pb-20 relative" id="hero">
+        <!-- Background Effects -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue-500/10 rounded-[100%] blur-[100px] pointer-events-none">
+        </div>
+        <div class="absolute top-20 right-0 w-[500px] h-[500px] bg-cyan-500/5 rounded-[100%] blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs mb-8 transition-colors cursor-pointer bg-white/5 border-white/10 text-blue-300 hover:bg-white/10">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-blue-400"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                Профессиональная веб-разработка
+                <iconify-icon icon="lucide:arrow-right" width="12" stroke-width="1.5"></iconify-icon>
+            </div>
+
+            <h1 class="md:text-7xl lg:text-8xl leading-[1.1] text-5xl font-medium text-white tracking-tight max-w-4xl mr-auto mb-6 ml-auto">
+                Создаём цифровые решения <br class=""> <span class="text-stone-500">для вашего бизнеса</span></h1>
+
+            <p class="md:text-xl leading-relaxed text-lg font-light text-stone-400 max-w-2xl mr-auto mb-10 ml-auto">
+                Разрабатываем современные мобильные приложения, веб-сайты и Telegram боты с фокусом на результат.
+                Надёжные технологии, чистый код и профессиональный подход.</p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+                <button class="h-10 px-6 rounded-full text-sm font-medium transition-colors flex items-center gap-2 group bg-white text-black hover:bg-stone-200">
+                    Обсудить проект
+                    <iconify-icon icon="lucide:arrow-right" width="16" class="group-hover:translate-x-0.5 transition-transform" stroke-width="1.5"></iconify-icon>
+                </button>
+                <button class="h-10 px-6 rounded-full border text-sm font-medium transition-colors flex items-center gap-2 bg-white/5 border-white/10 text-white hover:bg-white/10">
+                    <iconify-icon icon="lucide:briefcase" width="16" stroke-width="1.5"></iconify-icon>
+                    Наши работы
+                </button>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-semibold mb-1 text-white">150+</div>
+                    <div class="text-xs text-stone-500 uppercase tracking-wider">Проектов реализовано</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-semibold mb-1 text-white">5+</div>
+                    <div class="text-xs text-stone-500 uppercase tracking-wider">Лет на рынке</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-semibold mb-1 text-white">98%</div>
+                    <div class="text-xs text-stone-500 uppercase tracking-wider">Довольных клиентов</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-semibold mb-1 text-white">24/7</div>
+                    <div class="text-xs text-stone-500 uppercase tracking-wider">Техническая поддержка</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">Наши услуги</div>
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-4 text-white">Что мы предлагаем</h2>
+                <p class="max-w-2xl mx-auto text-lg font-light text-stone-400">Полный спектр услуг для развития вашего бизнеса в цифровой среде</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="glass-panel p-8 rounded-xl group hover:bg-white/[0.06] transition-colors">
+                    <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-white/5 border-white/10 text-white">
+                        <iconify-icon icon="lucide:layout-dashboard" width="20" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2 text-white">Разработка веб-сайтов</h3>
+                    <p class="text-sm leading-relaxed mb-4 text-stone-400">Корпоративные сайты, лендинги и интернет-магазины с современным дизайном и адаптивной версткой</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            Адаптивная вёрстка
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            SEO-оптимизация
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            Высокая производительность
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-panel p-8 rounded-xl group hover:bg-white/[0.06] transition-colors">
+                    <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-white/5 border-white/10 text-white">
+                        <iconify-icon icon="lucide:bot" width="20" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2 text-white">Telegram боты</h3>
+                    <p class="text-sm leading-relaxed mb-4 text-stone-400">Автоматизация бизнес-процессов, приём заказов и интеграция с внешними системами</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            Приём платежей
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            CRM интеграция
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            Аналитика и отчёты
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-panel p-8 rounded-xl group hover:bg-white/[0.06] transition-colors">
+                    <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-white/5 border-white/10 text-white">
+                        <iconify-icon icon="lucide:smartphone" width="20" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2 text-white">Мобильные приложения</h3>
+                    <p class="text-sm leading-relaxed mb-4 text-stone-400">Проектирование удобных интерфейсов с фокусом на пользовательский опыт</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            Прототипирование
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            Дизайн-система
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-stone-400">
+                            <iconify-icon icon="lucide:check" class="text-blue-400" width="14"></iconify-icon>
+                            UX исследования
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 border-t bg-white/[0.005] border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">Этапы работы</div>
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-4 text-white">Процесс разработки</h2>
+                <p class="max-w-2xl mx-auto text-lg font-light text-stone-400">Чёткий и прозрачный процесс от идеи до запуска проекта</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="glass-panel p-6 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 text-6xl font-bold text-white/5">01</div>
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-4 bg-blue-500/10 border-blue-500/20 text-blue-400">
+                            <iconify-icon icon="lucide:search" width="20" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-white">Анализ</h3>
+                        <p class="text-sm leading-relaxed text-stone-400">Изучаем ваш бизнес, целевую аудиторию и конкурентов. Формируем техническое задание.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-panel p-6 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 text-6xl font-bold text-white/5">02</div>
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-4 bg-blue-500/10 border-blue-500/20 text-blue-400">
+                            <iconify-icon icon="lucide:pen-tool" width="20" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-white">Проектирование</h3>
+                        <p class="text-sm leading-relaxed text-stone-400">Создаём прототип и дизайн-концепцию, согласовываем каждую деталь с вами.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-panel p-6 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 text-6xl font-bold text-white/5">03</div>
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-4 bg-blue-500/10 border-blue-500/20 text-blue-400">
+                            <iconify-icon icon="lucide:code-2" width="20" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-white">Разработка</h3>
+                        <p class="text-sm leading-relaxed text-stone-400">Реализуем проект с использованием современных технологий и best practices.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-panel p-6 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-4 right-4 text-6xl font-bold text-white/5">04</div>
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-4 bg-blue-500/10 border-blue-500/20 text-blue-400">
+                            <iconify-icon icon="lucide:rocket" width="20" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-white">Запуск</h3>
+                        <p class="text-sm leading-relaxed text-stone-400">Тестируем, запускаем проект и предоставляем полную документацию.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">Наши работы</div>
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-4 text-white">Портфолио проектов</h2>
+                <p class="max-w-2xl mx-auto text-lg font-light text-stone-400">Реализованные проекты, которые приносят результат нашим клиентам</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="glass-panel rounded-xl overflow-hidden group cursor-pointer hover:bg-white/[0.06] transition-all">
+                    <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/10 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <iconify-icon icon="lucide:shopping-cart" class="text-white/30" width="64"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">E-commerce</span>
+                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Web</span>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-white">Интернет-магазин</h3>
+                        <p class="text-sm text-stone-400">Полнофункциональная платформа для онлайн-торговли с интеграцией платёжных систем</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-panel rounded-xl overflow-hidden group cursor-pointer hover:bg-white/[0.06] transition-all">
+                    <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/10 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <iconify-icon icon="lucide:bot" class="text-white/30" width="64"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Telegram</span>
+                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Bot</span>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-white">Бот для доставки</h3>
+                        <p class="text-sm text-stone-400">Автоматизация приёма заказов с интеграцией в CRM и платёжные системы</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-panel rounded-xl overflow-hidden group cursor-pointer hover:bg-white/[0.06] transition-all">
+                    <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/10 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <iconify-icon icon="lucide:building-2" class="text-white/30" width="64"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Corporate</span>
+                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Web</span>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-white">Корпоративный сайт</h3>
+                        <p class="text-sm text-stone-400">Многостраничный сайт с адаптивным дизайном и системой управления контентом</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="glass-panel rounded-xl overflow-hidden group cursor-pointer hover:bg-white/[0.06] transition-all">
+                    <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/10 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <iconify-icon icon="lucide:zap" class="text-white/30" width="64"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Landing</span>
+                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Design</span>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2 text-white">Целевая страница</h3>
+                        <p class="text-sm text-stone-400">Продающий лендинг с высокой конверсией для технологического стартапа</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 relative overflow-hidden border-t bg-white/[0.005] border-white/5">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[100px] pointer-events-none bg-blue-900/10">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">Стоимость</div>
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-4 text-white">Тарифные планы</h2>
+                <p class="text-lg font-light mb-8 text-stone-400">Прозрачное ценообразование без скрытых платежей</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-medium text-white">Базовый</h3>
+                        <div class="mt-2 flex items-baseline gap-1">
+                            <span class="text-sm text-stone-500">от</span>
+                            <span class="text-3xl font-medium text-white">30 000</span>
+                            <span class="text-sm text-stone-500">₽</span>
+                        </div>
+                        <p class="text-xs mt-2 text-stone-400">Для стартапов и малого бизнеса</p>
+                    </div>
+                    <div class="my-6 border-t border-white/5"></div>
+                    <ul class="space-y-3 flex-1">
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>Landing Page / Визитка</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>Адаптивный дизайн</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>Базовая SEO-оптимизация</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>1 месяц технической поддержки</span>
+                        </li>
+                    </ul>
+                    <button class="mt-8 w-full py-2 rounded-lg border text-sm font-medium transition-colors bg-white/5 border-white/10 text-white hover:bg-white/10">Выбрать план</button>
+                </div>
+
+                <!-- Pro Plan (Highlighted) -->
+                <div class="p-8 rounded-2xl flex flex-col bg-white/[0.03] border border-blue-500/30 relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent rounded-2xl pointer-events-none">
+                    </div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.5)] text-white">
+                        Популярный</div>
+
+                    <div class="mb-4 relative z-10">
+                        <h3 class="text-lg font-medium text-white">Профессиональный</h3>
+                        <div class="mt-2 flex items-baseline gap-1">
+                            <span class="text-sm text-stone-500">от</span>
+                            <span class="text-3xl font-medium text-white">70 000</span>
+                            <span class="text-sm text-stone-500">₽</span>
+                        </div>
+                        <p class="text-xs mt-2 text-stone-400">Для среднего бизнеса</p>
+                    </div>
+                    <div class="my-6 border-t relative z-10 border-white/5"></div>
+                    <ul class="space-y-3 flex-1 relative z-10">
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="mt-0.5 text-blue-400" width="16"></iconify-icon>
+                            <span>Многостраничный сайт</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="mt-0.5 text-blue-400" width="16"></iconify-icon>
+                            <span>Уникальный дизайн</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="mt-0.5 text-blue-400" width="16"></iconify-icon>
+                            <span>CMS / Админ-панель</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="mt-0.5 text-blue-400" width="16"></iconify-icon>
+                            <span>Интеграции с сервисами</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="mt-0.5 text-blue-400" width="16"></iconify-icon>
+                            <span>3 месяца технической поддержки</span>
+                        </li>
+                    </ul>
+                    <button class="mt-8 w-full py-2 rounded-lg text-sm font-medium transition-colors relative z-10 shadow-[0_0_20px_rgba(255,255,255,0.1)] bg-white text-black hover:bg-stone-200">Выбрать план</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-medium text-white">Корпоративный</h3>
+                        <div class="mt-2 flex items-baseline gap-1">
+                            <span class="text-sm text-stone-500">от</span>
+                            <span class="text-3xl font-medium text-white">150 000</span>
+                            <span class="text-sm text-stone-500">₽</span>
+                        </div>
+                        <p class="text-xs mt-2 text-stone-400">Для крупных проектов</p>
+                    </div>
+                    <div class="my-6 border-t border-white/5"></div>
+                    <ul class="space-y-3 flex-1">
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>Индивидуальная разработка</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>Сложная функциональность</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>API и интеграции</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>Масштабируемая архитектура</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <iconify-icon icon="lucide:check" class="text-stone-500 mt-0.5" width="16"></iconify-icon>
+                            <span>6 месяцев технической поддержки</span>
+                        </li>
+                    </ul>
+                    <button class="mt-8 w-full py-2 rounded-lg border text-sm font-medium transition-colors bg-white/5 border-white/10 text-white hover:bg-white/10">Обсудить проект</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">Контакты</div>
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-4 text-white">Свяжитесь с нами</h2>
+                <p class="max-w-2xl mx-auto text-lg font-light text-stone-400">Готовы обсудить ваш проект? Оставьте заявку, и мы свяжемся с вами в ближайшее время</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Email -->
+                <div class="glass-panel p-6 rounded-xl text-center">
+                    <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-4 mx-auto bg-blue-500/10 border-blue-500/20 text-blue-400">
+                        <iconify-icon icon="lucide:mail" width="20" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-sm font-medium mb-2 text-white">Email</h3>
+                    <a href="mailto:info@webcraft-studio.ru" class="text-sm text-blue-400 hover:text-blue-300 transition-colors">info@webcraft-studio.ru</a>
+                </div>
+
+                <!-- Phone -->
+                <div class="glass-panel p-6 rounded-xl text-center">
+                    <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-4 mx-auto bg-blue-500/10 border-blue-500/20 text-blue-400">
+                        <iconify-icon icon="lucide:phone" width="20" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-sm font-medium mb-2 text-white">Телефон</h3>
+                    <a href="tel:+79991234567" class="text-sm text-blue-400 hover:text-blue-300 transition-colors block">+7 (999) 123-45-67</a>
+                    <p class="text-xs text-stone-500 mt-1">Пн-Пт: 10:00 - 19:00 МСК</p>
+                </div>
+
+                <!-- Telegram -->
+                <div class="glass-panel p-6 rounded-xl text-center">
+                    <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-4 mx-auto bg-blue-500/10 border-blue-500/20 text-blue-400">
+                        <iconify-icon icon="lucide:send" width="20" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-sm font-medium mb-2 text-white">Telegram</h3>
+                    <a href="https://t.me/Web_Machine_studio" class="text-sm text-blue-400 hover:text-blue-300 transition-colors">@Web_Machine_studio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="border-t bg-[#050505] pt-16 pb-8 border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 gap-8 mb-16">
+                <div class="text-center">
+                    <a href="#" class="flex items-center gap-2 mb-4 justify-center">
+                        <div class="w-5 h-5 rounded flex items-center justify-center bg-white/10">
+                            <span class="text-white text-[10px] font-bold">WM</span>
+                        </div>
+                        <span class="text-sm font-semibold tracking-tight text-white">Web Machine Studio</span>
+                    </a>
+                    <p class="text-sm text-stone-500 mb-6 max-w-md mx-auto">
+                        Профессиональная веб-разработка для вашего бизнеса
+                    </p>
+                    <div class="flex gap-4 justify-center">
+                        <a href="#" class="text-stone-500 transition-colors hover:text-white">
+                            <iconify-icon icon="lucide:twitter" width="18"></iconify-icon>
+                        </a>
+                        <a href="#" class="text-stone-500 transition-colors hover:text-white">
+                            <iconify-icon icon="lucide:instagram" width="18"></iconify-icon>
+                        </a>
+                        <a href="#" class="text-stone-500 transition-colors hover:text-white">
+                            <iconify-icon icon="lucide:linkedin" width="18"></iconify-icon>
+                        </a>
+                        <a href="#" class="text-stone-500 transition-colors hover:text-white">
+                            <iconify-icon icon="lucide:github" width="18"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 border-white/5">
+                <p class="text-xs text-stone-600">© 2026 Web Machine Studio. Все права защищены.</p>
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                    <span class="text-xs text-stone-500">Работаем для вас</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body></html>
