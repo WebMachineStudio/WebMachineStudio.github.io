@@ -1,2 +1,1 @@
-[the web site of the company
-](https://webmachinestudio.github.io/)
+https://webmachinestudio.github.io/
